@@ -10,13 +10,10 @@ on:
       - package-lock.json
       - pnpm-lock.yaml
       - yarn.lock
-  push:
-    branches:
-      - main
 jobs: 
-  dura:
+  dura-analysis:
     runs-on: ubuntu-latest
-    container: node:22
+    # container: node:22
     steps:
       - uses: actions/checkout@v6
       - name: Install Node
