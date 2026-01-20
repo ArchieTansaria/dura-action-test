@@ -1,4 +1,8 @@
 name: DURA Dependency Risk Check
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
 on: 
   push:
     branches:
