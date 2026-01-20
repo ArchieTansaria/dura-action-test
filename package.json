@@ -1,0 +1,27 @@
+{
+  "name": "dura-action-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArchieTansaria/dura-action-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArchieTansaria/dura-action-test/issues"
+  },
+  "homepage": "https://github.com/ArchieTansaria/dura-action-test#readme",
+  "description": "",
+  "dependencies": {
+    "accepts": "^2.0.0",
+    "chalk": "^5.6.2",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "typescript": "^5.9.3"
+  }
+}
