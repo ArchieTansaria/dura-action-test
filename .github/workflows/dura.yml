@@ -4,9 +4,6 @@ permissions:
   issues: write
   pull-requests: write
 on: 
-  push:
-    branches:
-      - main
   pull_request :
     paths:
       - package.json
@@ -36,6 +33,10 @@ jobs:
         uses: actions/github-script@v8
         with: 
           script: |
+            if (!context.payload.pull_request) {
+              console.log("Not a pull request event. Skipping PR comment.");
+              return;
+            }
             const fs = require("fs");
 
             const report = JSON.parse(
@@ -87,7 +88,7 @@ jobs:
             - Update dependencies incrementally
             - Run full test suite before merging
 
-            Full report available as workflow artifact: \`dura-report.json\`
+            Full report available as workflow artifact: \`dura.json\`
             `;
 
             await github.rest.issues.createComment({
