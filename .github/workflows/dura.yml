@@ -10,6 +10,9 @@ on:
       - package-lock.json
       - pnpm-lock.yaml
       - yarn.lock
+  push:
+    branches:
+      - main
 jobs: 
   dura:
     runs-on: ubuntu-latest
