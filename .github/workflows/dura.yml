@@ -1,4 +1,8 @@
 name: DURA Dependency Risk Check
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
 on: 
   push:
     branches:
@@ -47,7 +51,7 @@ jobs:
             )
 
             const mediumRisk = report.filter(
-              d => d.breakingChange?.breaking === "low"
+              d => d.breakingChange?.breaking === "medium"
             )
 
             if (breaking.length === 0 && highRisk.length === 0) {
@@ -89,6 +93,7 @@ jobs:
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
               body: body
             })
 
