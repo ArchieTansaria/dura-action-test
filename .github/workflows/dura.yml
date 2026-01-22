@@ -13,7 +13,6 @@ on:
 jobs: 
   dura-analysis:
     runs-on: ubuntu-latest
-    # container: node:22
     steps:
       - uses: actions/checkout@v6
       - name: Install Node
