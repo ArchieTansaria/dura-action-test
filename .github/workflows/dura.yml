@@ -4,13 +4,7 @@ permissions:
   issues: write
   pull-requests: write
 on: 
-  pull_request :
-    paths:
-      - '**/package.json'
-      - '**/package-lock.json'
-      - '**/pnpm-lock.yaml'
-      - '**/yarn.lock'
-      - '**/dura.yml'
+  pull_request
 jobs: 
   dura-analysis:
     runs-on: ubuntu-latest
